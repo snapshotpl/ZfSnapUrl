@@ -1,0 +1,30 @@
+{
+    "name": "snapshotpl/zf-snap-url",
+    "description": "Improvment url view helper",
+    "type": "library",
+    "keywords": [
+        "zf2",
+        "view helper",
+        "url"
+    ],
+    "homepage": "https://github.com/snapshotpl/ZfSnapUrl",
+    "authors": [
+        {
+            "name": "Witold Wasiczko",
+            "email": "witold@wasiczko.pl",
+            "homepage": "http://www.psd2html.pl/"
+        }
+    ],
+    "require": {
+        "zendframework/zend-view": "2.2.*",
+        "zendframework/zend-modulemanager": "2.2.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "ZfSnapUrl": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}
