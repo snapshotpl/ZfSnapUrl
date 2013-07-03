@@ -34,3 +34,14 @@ And just write in view to print user profile url:
 ```php
 <?= $this->url('user/profile', array('id' => $this->user->getId(), 'slug' => $this->user->getSlug())) ?>
 ```
+
+How to install?
+---------------
+Via [`composer`](https://getcomposer.org/)
+```json
+{
+    "require": {
+        "snapshotpl/zf-snap-url": "dev-master"
+    }
+}
+```
