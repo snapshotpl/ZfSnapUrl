@@ -18,8 +18,8 @@ class User implements \ZfSnapUrl\Routable {
 
     public function getRouteParams() {
         return array(
-            'id' => $this->id,
-            'slug' => $this->slug,
+            'id' => $this->getId(),
+            'slug' => $this->getSlug(),
         );
     }
 }
