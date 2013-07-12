@@ -49,9 +49,18 @@ Via [`composer`](https://getcomposer.org/)
 Tests
 -----
 
-```composer install --dev```
+```
+composer install --dev
+```
+
 or
-```composer update```
+
+```
+composer update
+```
+
 then
-```bin/phpunit src/
+
+```
+bin/phpunit src/
 ```
