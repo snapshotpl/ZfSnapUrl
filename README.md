@@ -18,7 +18,7 @@ class User implements \ZfSnapUrl\Routable {
 
     public function getRouteParams() {
         return array(
-            'id' => $this->getId(),
+            'id'   => $this->getId(),
             'slug' => $this->getSlug(),
         );
     }
@@ -44,4 +44,14 @@ Via [`composer`](https://getcomposer.org/)
         "snapshotpl/zf-snap-url": "dev-master"
     }
 }
+```
+
+Tests
+-----
+
+```composer install --dev```
+or
+```composer update```
+then
+```bin/phpunit src/
 ```

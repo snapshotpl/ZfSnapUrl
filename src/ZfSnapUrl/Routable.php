@@ -3,17 +3,23 @@
 namespace ZfSnapUrl;
 
 /**
- * @author witold
+ * Routable Interface required by ViewHelper\U
+ *
+ * @package ZfSnapUrl
+ * @author  Witold Wasiczko <witold@wasiczko.pl>
+ * @author  Grzegorz Rygielski <rygielski@red-sky.pl>
  */
 interface Routable
 {
     /**
-     * return string
+     * Get route name
+     * @return string
      */
     public function getRouteName();
 
     /**
-     * return array
+     * Get route params
+     * @return array
      */
     public function getRouteParams();
 }
