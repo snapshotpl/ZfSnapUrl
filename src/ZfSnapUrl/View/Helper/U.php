@@ -11,7 +11,6 @@ use ZfSnapUrl\Routable;
  *
  * @package ZfSnapUrl\View\Helper
  * @author  Witold Wasiczko <witold@wasiczko.pl>
- * @author  Grzegorz Rygielski <grzeogrz.rygielski@red-sky.pl>
  */
 class U extends AbstractHelper
 {
@@ -31,6 +30,7 @@ class U extends AbstractHelper
     public function __invoke(Routable $routable)
     {
         $view = $this->getView();
+
         if (empty($view)) {
             throw new Exception\RuntimeException('View not initialized');
         }

@@ -7,7 +7,6 @@ namespace ZfSnapUrl;
  *
  * @package ZfSnapUrl
  * @author  Witold Wasiczko <witold@wasiczko.pl>
- * @author  Grzegorz Rygielski <rygielski@red-sky.pl>
  */
 interface Routable
 {

@@ -1,4 +1,4 @@
-ZfSnapUrl 0.1.0
+ZfSnapUrl 1.0.0
 =========
 It's the shortest url view helper ever for *Zend Framework 2*! :-)
 
@@ -49,18 +49,18 @@ Via [`composer`](https://getcomposer.org/)
 Tests
 -----
 
-```
+```sh
 composer install --dev
 ```
 
 or
 
-```
+```sh
 composer update
 ```
 
 then
 
-```
-bin/phpunit src/
+```sh
+vendor/bin/phpunit src/
 ```

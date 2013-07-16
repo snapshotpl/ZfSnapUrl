@@ -16,7 +16,7 @@
         },
         {
             "name": "Grzegorz Rygielski",
-            "email": "grzegorz.rygielski@gmail.com"
+            "email": "rygielski@red-sky.pl"
         }
     ],
     "require": {
@@ -33,8 +33,5 @@
         "classmap": [
             "./Module.php"
         ]
-    },
-    "config": {
-        "bin-dir": "bin"
     }
 }
