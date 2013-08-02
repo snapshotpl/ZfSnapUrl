@@ -105,5 +105,5 @@ vendor/bin/phpunit src/
 
 Changelog
 ---------
-* **1.1.0** Support for multi routest
+* **1.1.0** Support for multi routes
 * **1.0.0** Stable version with unit test
