@@ -18,6 +18,7 @@ class U extends AbstractHelper
      * Make route
      *
      * @param Routable $routable routable item
+     * @param string $routeName
      *
      * @return string Url                         For the link href attribute
      *
@@ -27,7 +28,7 @@ class U extends AbstractHelper
      * @throws Exception\RuntimeException         If RouteMatch didn't contain a matched route name
      * @throws Exception\InvalidArgumentException If the params object was not an array or \Traversable object
      */
-    public function __invoke(Routable $routable)
+    public function __invoke(Routable $routable, $routeName = null)
     {
         $view = $this->getView();
 
@@ -35,8 +36,25 @@ class U extends AbstractHelper
             throw new Exception\RuntimeException('View not initialized');
         }
 
-        $routeName   = $routable->getRouteName();
+        if ($routeName === null) {
+            $routeName = $routable->getRouteName();
+        }
         $routeParams = $routable->getRouteParams();
+
+        if (isset($routeParams[$routeName])) {
+            $multiRoute = false;
+
+            if (is_array($routeParams[$routeName])) {
+                $multiRoute = $routeParams[$routeName];
+            } else if (is_callable($routeParams[$routeName])) {
+                $multiRoute = $routeParams[$routeName]();
+            }
+
+            if ($multiRoute !== false) {
+                $routeName = $multiRoute['route'];
+                $routeParams = $multiRoute['params'];
+            }
+        }
 
         return $view->url($routeName, $routeParams);
     }
