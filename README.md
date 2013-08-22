@@ -1,6 +1,8 @@
-ZfSnapUrl 1.1.0
+ZfSnapUrl
 =========
 It's the shortest url view helper ever for *Zend Framework 2*! :-)
+
+Version 1.1.0 Created by Witold Wasiczko
 
 Usage
 -----
