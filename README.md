@@ -2,7 +2,7 @@ ZfSnapUrl [![Build Status](https://travis-ci.org/snapshotpl/ZfSnapUrl.png?branch
 =========
 It's the shortest url view helper ever for *Zend Framework 2*! :-)
 
-Version 1.1.0 Created by Witold Wasiczko
+Version 1.1.1 Created by Witold Wasiczko
 
 Usage
 -----
@@ -107,5 +107,6 @@ phpunit --configuration tests/
 
 Changelog
 ---------
+* **1.1.1** Travis CI
 * **1.1.0** Support for multi routes
 * **1.0.0** Stable version with unit test
