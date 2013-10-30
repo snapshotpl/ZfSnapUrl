@@ -1,4 +1,4 @@
-ZfSnapUrl
+ZfSnapUrl [![Build Status](https://travis-ci.org/snapshotpl/ZfSnapUrl.png?branch=master)](https://travis-ci.org/snapshotpl/ZfSnapUrl)
 =========
 It's the shortest url view helper ever for *Zend Framework 2*! :-)
 
