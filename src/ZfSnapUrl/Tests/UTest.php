@@ -138,17 +138,18 @@ class UTest extends \PHPUnit_Framework_TestCase
 
     private function getCallableMultiRoutableMock()
     {
+        $instance = $this;
         return $this->getRoutableMock('firstRoute', array(
-                    'firstRoute' => function () {
+                    'firstRoute' => function () use ($instance) {
                         return array(
-                            'route' => $this->routeName,
-                            'params' => $this->routeParams,
+                            'route' => $instance->routeName,
+                            'params' => $instance->routeParams,
                         );
                     },
-                    'secondRoute' => function () {
+                    'secondRoute' => function () use ($instance) {
                         return array(
-                            'route' => $this->routeName,
-                            'params' => $this->routeParams,
+                            'route' => $instance->routeName,
+                            'params' => $instance->routeParams,
                         );
                     },
         ));
