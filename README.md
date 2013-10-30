@@ -62,5 +62,5 @@ composer update
 then
 
 ```sh
-vendor/bin/phpunit src/
+phpunit --configuration tests/
 ```
