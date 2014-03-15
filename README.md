@@ -1,8 +1,8 @@
 ZfSnapUrl [![Build Status](https://travis-ci.org/snapshotpl/ZfSnapUrl.png?branch=master)](https://travis-ci.org/snapshotpl/ZfSnapUrl)
 =========
-It's the shortest url view helper ever for *Zend Framework 2*! :-)
+It's the shortest url view helper ever for **Zend Framework 2**! :-)
 
-Version 1.1.1 Created by Witold Wasiczko
+Version 1.1.2 Created by Witold Wasiczko
 
 Usage
 -----
@@ -13,6 +13,8 @@ For routing:
 Implements interface:
 ```php
 class User implements \ZfSnapUrl\Routable {
+
+    /* CODE */
 
     public function getRouteName() {
         return 'user/profile';
@@ -36,6 +38,8 @@ Or you can define multi routes:
 ```php
 class User implements \ZfSnapUrl\Routable {
 
+    /* CODE */
+
     public function getRouteName() {
         return 'profile';
     }
@@ -50,9 +54,9 @@ class User implements \ZfSnapUrl\Routable {
                 );
             ),
             'edit' => function () {
-                // You can use anonymus functions
+                // You can use closures
                 return array(
-                    'route'  => 'user/supelongroutename/edit'
+                    'route'  => 'user/super-long-route-name/edit'
                     'params' => array(
                         'id'   => $this->getId(),
                     );
@@ -65,9 +69,12 @@ class User implements \ZfSnapUrl\Routable {
 
 And just write in view to print user profile url:
 ```php
-<?= $this->u($this->user) ?> - To link user profile (default defined in getRouteName())
-<?= $this->u($this->user, 'profile') ?> - Alias to first call
-<?= $this->u($this->user, 'edit') ?> - custom route
+To link user profile (default defined in getRouteName())
+<?= $this->u($this->user) ?>
+Alias for prev usage
+<?= $this->u($this->user, 'profile') ?>
+Custom route
+<?= $this->u($this->user, 'edit') ?>
 ```
 
 **Without ZfSnapUrl** you need to write **THIS** every single time (!):
@@ -81,7 +88,7 @@ Via [`composer`](https://getcomposer.org/)
 ```json
 {
     "require": {
-        "snapshotpl/zf-snap-url": "dev-master"
+        "snapshotpl/zf-snap-url": "1.*"
     }
 }
 ```
@@ -107,6 +114,7 @@ phpunit --configuration tests/
 
 Changelog
 ---------
+* **1.1.2** Fixes ZF version dependencies in composer.json, small README improvements
 * **1.1.1** Travis CI
 * **1.1.0** Support for multi routes
 * **1.0.0** Stable version with unit test

@@ -55,7 +55,6 @@ class U extends AbstractHelper
                 $routeParams = $multiRoute['params'];
             }
         }
-
         return $view->url($routeName, $routeParams);
     }
 }
